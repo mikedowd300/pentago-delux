@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pentago</title>
+	<link rel="stylesheet" type="text/css" href="main.css">	
+</head>
+<body>
+	<div class='instruct-modal'>
+		<h1 class='instruct-header big-header'>Pentago</h1>
+		<h2 class='instruct-hider'>Game Room</h2>
+		<h2 class='instruct-header'>Click anywhere to begin!</h2>
+		<p class='instruct-parapraph'>Lorum ipsum et excremum</p>
+		<h1 class='instruct-header'>Game play</h1>
+		<p class='instruct-parapraph'>Lorum ipsum blah blah</p>
+	</div>
+	<div class='game-over-modal'>
+		<h1 class='end-message'>I REGRET TO SAY, "THIS IS THE END!"</h1>
+		<div class='play-again-button'>Game Room</div>
+	</div>
+	<div class='get-name'>
+		<h1 id='name-label'>What's your name?</h1>
+		<input type="text" class="player-name" placeholder="Enter Your Name Here">
+	</div>
+	<div class='master-wrapper'>
+		<div class='table-super-wrapper'>
+			<div class="table-wrapper">
+				<h1>Open Games</h1>
+				
+			</div>
+			<div class="button-wrapper">
+				<div class="black-button button">
+					<p>Start Table as Black</p>
+				</div>
+				<div class="white-button button">
+					<p>Start Table as White</p>
+				</div>
+				<div class="instruct-button button">
+					<p>How to Play</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="chat-super-wrapper">
+			<div class="chat-wrapper">
+				<div class="name-div">
+					<h1 class='chat-name'></h1>
+				</div>
+				<div class="message-log-div">
+					
+				</div>
+				<div class="input-div">
+					<textarea class="chat-box" placeholder="Type your message here"></textarea>
+				</div>			
+			</div>
+			<div class="status-div">
+				Status: <span>Idle</span>
+			</div>
+		</div>
+
+		<div class='board-wrapper' onResize='adjustBoardHeight()'>
+			<div class='whose-move'>Your Turn</div>
+			<div class='board'>
+				<div class='flipper q1-top' onClick=''>
+					<div class='flipper-img'><img class="clockwise" src="./images/clockwise.PNG"></div>
+				</div>
+				<div class='flipper q1-side'>
+					<div class='flipper-img'><img class="counter-clockwise" src="./images/counterclockwise.PNG"></div>
+				</div>
+				<div class='flipper q2-top'>
+					<div class='flipper-img'><img class="clockwise" src="./images/clockwise.PNG"></div>
+				</div>
+				<div class='flipper q2-side'>
+					<div class='flipper-img'><img class="counter-clockwise" src="./images/counterclockwise.PNG"></div>
+				</div>
+				<div class='flipper q3-bot'>
+					<div class='flipper-img'><img class="clockwise" src="./images/clockwise.PNG"></div>
+				</div>
+				<div class='flipper q3-side'>
+					<div class='flipper-img'><img class="counter-clockwise" src="./images/counterclockwise.PNG"></div>
+				</div>
+				<div class='flipper q4-bot'>
+					<div class='flipper-img'><img class="clockwise" src="./images/clockwise.PNG"></div>
+				</div>
+				<div class='flipper q4-side'>
+					<div class='flipper-img'><img class="counter-clockwise" src="./images/counterclockwise.PNG"></div>
+				</div>
+				<div class='quadrant q-t-l'>
+					<div class='cell1 hole'></div>
+					<div class='cell2 hole'></div>
+					<div class='cell3 hole'></div>
+					<div class='cell4 hole'></div>
+					<div class='cell5 hole'></div>
+					<div class='cell6 hole'></div>
+					<div class='cell7 hole'></div>
+					<div class='cell8 hole'></div>
+					<div class='cell9 hole'></div>					
+				</div>
+				<div class='quadrant q-t-r'>
+					<div class='cell1 hole'></div>
+					<div class='cell2 hole'></div>
+					<div class='cell3 hole'></div>
+					<div class='cell4 hole'></div>
+					<div class='cell5 hole'></div>
+					<div class='cell6 hole'></div>
+					<div class='cell7 hole'></div>
+					<div class='cell8 hole'></div>
+					<div class='cell9 hole'></div>					
+				</div>
+				<div class='quadrant q-b-l'>
+					<div class='cell1 hole'></div>
+					<div class='cell2 hole'></div>
+					<div class='cell3 hole'></div>
+					<div class='cell4 hole'></div>
+					<div class='cell5 hole'></div>
+					<div class='cell6 hole'></div>
+					<div class='cell7 hole'></div>
+					<div class='cell8 hole'></div>
+					<div class='cell9 hole'></div>					
+				</div>
+				<div class='quadrant q-b-r'>
+					<div class='cell1 hole'></div>
+					<div class='cell2 hole'></div>
+					<div class='cell3 hole'></div>
+					<div class='cell4 hole'></div>
+					<div class='cell5 hole'></div>
+					<div class='cell6 hole'></div>
+					<div class='cell7 hole'></div>
+					<div class='cell8 hole'></div>
+					<div class='cell9 hole'></div>					
+				</div>
+			</div>
+			<div class="submit-button">Submit</div>
+		</div>
+	</div>
+
+	<script src="http://127.0.0.1:3000/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>	
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="board.js"></script>
+</body>
+</html>
