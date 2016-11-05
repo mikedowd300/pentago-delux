@@ -1,0 +1,25 @@
+{
+  "name": "pentago_delux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "board.js",
+  "dependencies": {
+    "mongodb": "^2.2.10",
+    "socket.io": "^1.4.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikedowd300/pentago-delux.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikedowd300/pentago-delux/issues"
+  },
+  "homepage": "https://github.com/mikedowd300/pentago-delux#readme"
+}
